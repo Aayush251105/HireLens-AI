@@ -1,4 +1,4 @@
-# HireLens AI — The Intelligent Recruiter Simulator
+# HireLens AI - The Intelligent Recruiter Simulator
 
 HireLens AI is a high-performance, premium AI recruiter platform designed to help candidates prepare for real-world interviews. By simulating distinct recruiter personas (from aggressive Startup Founders to methodical Big Tech recruiters), HireLens provides a stressful yet constructive environment to refine your technical and behavioral responses.
 
@@ -70,4 +70,3 @@ This project is optimized for deployment on **Render** or **Railway**.
 - **Start Command**: `node dist/server.bundle.mjs`
 
 ---
-Built with ❤️ for the next generation of top-tier candidates.
