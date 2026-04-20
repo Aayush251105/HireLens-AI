@@ -24,7 +24,8 @@ function serverBundlePlugin(): Plugin {
         sourcemap: true,
         banner: {
           js: `import { createRequire } from 'module';
-const require = createRequire(import.meta.url);`
+const require = createRequire(import.meta.url);
+process.env.HOST = process.env.HOST || '0.0.0.0';`
         }
       });
       console.log("Server bundle created at dist/server.bundle.mjs");
