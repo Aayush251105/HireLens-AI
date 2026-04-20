@@ -25,6 +25,13 @@ export const viteServerAfter = (server, viteServer) => {
 
 // ServerHook
 export const serverBefore = (server) => {
+  // FORCE-PATCH: Override server.listen to always use 0.0.0.0 on Render
+  const originalListen = server.listen;
+  server.listen = function (port, host, callback) {
+    console.log(`Intercepting server.listen: Forcing 0.0.0.0 instead of ${host}`);
+    return originalListen.call(this, port, '0.0.0.0', callback);
+  };
+
   const shutdown = async (signal) => {
     console.log(`Got ${signal}, shutting down gracefully...`);
 
